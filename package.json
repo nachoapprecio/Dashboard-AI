@@ -1,0 +1,43 @@
+{
+  "name": "ai-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard Analítico con Chatbot integrado, Autenticación y generación de reportes PDF",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "nodemon server/index.js",
+    "client:dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js",
+    "seed": "node server/db/seed.js",
+    "test:webhook": "node test-webhook.js"
+  },
+  "keywords": [
+    "dashboard",
+    "ai",
+    "chatbot",
+    "analytics",
+    "pdf"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.1.3",
+    "axios": "^1.13.2",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "form-data": "^4.0.5",
+    "googleapis": "^128.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.10.1",
+    "pg": "^8.11.3",
+    "puppeteer": "^21.6.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}
