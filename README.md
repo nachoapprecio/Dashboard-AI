@@ -15,6 +15,17 @@ Dashboard Analítico con Chatbot integrado, Autenticación y generación de repo
 - **Responsive Design**: Optimizado para desktop y móvil
 - **PostgreSQL**: Base de datos robusta con datos históricos
 
+## ⚠️ Requisitos Importantes
+
+**Chrome for Testing**: El proyecto requiere Chrome para generar PDFs localmente con Puppeteer. **NO está incluido en el repositorio** para mantener el tamaño reducido. 
+
+Para instalarlo localmente:
+```bash
+npx @puppeteer/browsers install chrome@stable --path ./chrome
+```
+
+En producción (Railway), Puppeteer usará el Chrome del sistema automáticamente.
+
 ## 📁 Estructura del Proyecto
 
 ```
