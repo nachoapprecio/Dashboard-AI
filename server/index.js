@@ -63,7 +63,7 @@ app.use((err, req, res, next) => {
 });
 
 // Iniciar servidor
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
   console.log(`📊 Dashboard AI - Apprecio`);
   console.log(`🌍 Ambiente: ${process.env.NODE_ENV || 'development'}`);
