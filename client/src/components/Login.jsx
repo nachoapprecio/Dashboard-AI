@@ -76,8 +76,8 @@ function Login({ onLogin }) {
 
         <div className="login-footer">
           <p className="demo-credentials">
-            <strong>Credenciales de prueba:</strong><br />
-            admin@apprecio.com / admin123
+            <strong>By Nacho</strong><br />
+            Con Apprecio <img src="https://estudios.apprecio.com/hubfs/iconos%20animados/heartbeat.svg" alt="heart" style={{ width: '30px', height: '30px', verticalAlign: 'middle' }} />
           </p>
         </div>
       </div>
