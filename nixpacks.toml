@@ -1,0 +1,22 @@
+# Nixpacks Configuration for Railway
+# https://nixpacks.com/docs/configuration/file
+
+[phases.setup]
+nixPkgs = ["nodejs-18_x", "python3"]
+
+[phases.install]
+cmds = [
+  "npm ci --include=dev",
+  "cd client && npm ci"
+]
+
+[phases.build]
+cmds = [
+  "cd client && npm run build"
+]
+
+[start]
+cmd = "node server/index.js"
+
+[variables]
+NODE_ENV = "production"

@@ -208,44 +208,39 @@ El sistema utiliza n8n para procesar PDFs y enviarlos por email/Drive. Ver **[N8
 
 ## 📦 Despliegue en Railway
 
-### Paso 1: Preparar el Proyecto
+### Guía Completa de Deployment
 
-1. Asegúrate de que todos los archivos estén committeados en Git:
+📖 **Ver documentación completa**: **[RAILWAY_DEPLOY.md](./RAILWAY_DEPLOY.md)**
 
-```bash
-git add .
-git commit -m "Preparar para despliegue"
-git push
-```
+Esta guía paso a paso incluye:
+- ✅ Configuración de PostgreSQL
+- ✅ Variables de entorno requeridas
+- ✅ Inicialización de base de datos
+- ✅ Troubleshooting común
+- ✅ Comandos útiles de Railway CLI
 
-### Paso 2: Crear Proyecto en Railway
+### Quick Start
 
-1. Ve a [Railway](https://railway.app/)
-2. Crea una cuenta o inicia sesión
-3. Click en **New Project** → **Deploy from GitHub repo**
-4. Selecciona tu repositorio
+1. **Crear proyecto en Railway**:
+   - Ve a [Railway.app](https://railway.app/)
+   - Deploy from GitHub repo → Selecciona `Dashboard-AI`
 
-### Paso 3: Agregar PostgreSQL
+2. **Agregar PostgreSQL**:
+   - New → Database → PostgreSQL
+   - Railway crea automáticamente `DATABASE_URL`
 
-1. En tu proyecto de Railway, click en **New**
-2. Selecciona **Database** → **PostgreSQL**
-3. Railway creará automáticamente la base de datos
-4. Copia la variable `DATABASE_URL`
+3. **Configurar Variables**:
+   ```env
+   NODE_ENV=production
+   PORT=3000
+   JWT_SECRET=tu-secreto-seguro-de-32-chars
+   GOOGLE_API_KEY=AIzaSyA...
+   N8N_WEBHOOK_URL=https://n8n.openip.cl/webhook/pdf-report
+   CLIENT_URL=${{RAILWAY_PUBLIC_DOMAIN}}
+   ```
 
-### Paso 4: Configurar Variables de Entorno
-
-En Railway, ve a **Variables** y agrega todas las del archivo `.env`:
-
-```
-PORT=3000
-PORT=3000
-NODE_ENV=production
-DATABASE_URL=[copiado de Railway]
-GOOGLE_API_KEY=...
-N8N_WEBHOOK_URL=https://tu-instancia-n8n.com/webhook/pdf-report
-JWT_SECRET=...
-CLIENT_URL=[URL de tu app en Railway]
-```
+4. **Verificar deployment**:
+   - Health check: `https://tu-app.up.railway.app/api/health`
 
 ⚠️ **Importante**: El webhook de n8n debe estar configurado y activo antes de generar PDFs.
 

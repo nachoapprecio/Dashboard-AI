@@ -26,6 +26,17 @@ app.use(cors({
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
+// Health check endpoint (debe estar ANTES de las rutas de API)
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development',
+    database: process.env.DATABASE_URL ? 'configured' : 'not configured',
+    webhook: process.env.N8N_WEBHOOK_URL ? 'configured' : 'not configured'
+  });
+});
+
 // Rutas de API
 app.use('/api/auth', authRoutes);
 app.use('/api', chatRoutes);
@@ -33,21 +44,14 @@ app.use('/api/pdf', pdfRoutes);
 
 // Servir archivos estáticos del cliente en producción
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/dist')));
+  const clientDistPath = path.join(__dirname, '../client/dist');
+  app.use(express.static(clientDistPath));
   
+  // Todas las rutas no-API sirven el index.html (para React Router)
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+    res.sendFile(path.join(clientDistPath, 'index.html'));
   });
 }
-
-// Health check endpoint
-app.get('/health', (req, res) => {
-  res.json({ 
-    status: 'ok', 
-    timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || 'development'
-  });
-});
 
 // Manejo de errores global
 app.use((err, req, res, next) => {
