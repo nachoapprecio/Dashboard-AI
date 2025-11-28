@@ -32,6 +32,10 @@ Thumbs.db
 .local-chromium/
 chrome/
 
+# Database management scripts
+server/db/update-users.js
+server/db/update-reportes.js
+
 # Database JSON files (credentials sensibles)
-server/db/update-users.json
-server/db/update-reportes.json
+server/db/users.json
+server/db/reportes.json
