@@ -33,5 +33,5 @@ Thumbs.db
 chrome/
 
 # Database JSON files (credentials sensibles)
-server/db/users.json
-server/db/reportes.json
+server/db/update-users.json
+server/db/update-reportes.json
