@@ -41,7 +41,18 @@ CREATE TABLE IF NOT EXISTS reportes (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Tabla para reportes en nuevo formato JSON (2026+)
+-- Almacena la estructura completa del reporte para análisis con IA
+CREATE TABLE IF NOT EXISTS reportes_json (
+    id SERIAL PRIMARY KEY,
+    fecha_reporte DATE NOT NULL UNIQUE,
+    datos_completos JSONB NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Índices para mejorar performance
 CREATE INDEX IF NOT EXISTS idx_reportes_periodo ON reportes(periodo);
 CREATE INDEX IF NOT EXISTS idx_reportes_canal ON reportes(canal);
 CREATE INDEX IF NOT EXISTS idx_reportes_mes_actual ON reportes(es_mes_actual);
+CREATE INDEX IF NOT EXISTS idx_reportes_json_fecha ON reportes_json(fecha_reporte);

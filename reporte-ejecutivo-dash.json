@@ -1,25 +1,25 @@
 [
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "01-2025",
     "canal": "Inbound",
-    "leads_real": 255,
+    "leads_real": 278,
     "leads_meta": 162,
-    "leads_avance_pct": 157.41,
+    "leads_avance_pct": 171.6,
     "leads_estado": "cumplido",
-    "prospectos_real": 108,
+    "prospectos_real": 112,
     "prospectos_meta": 45,
-    "prospectos_avance_pct": 240,
+    "prospectos_avance_pct": 248.89,
     "prospectos_estado": "cumplido",
     "cierres_real": 13,
     "cierres_meta": 13,
     "cierres_avance_pct": 100,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "01-2025",
     "canal": "Outbound",
     "leads_real": 11,
@@ -35,10 +35,10 @@
     "cierres_avance_pct": 300,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "01-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -54,10 +54,10 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "01-2025",
     "canal": "Hunting",
     "leads_real": 4,
@@ -73,10 +73,10 @@
     "cierres_avance_pct": 42.86,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "01-2025",
     "canal": "Cross Selling",
     "leads_real": 3,
@@ -92,10 +92,10 @@
     "cierres_avance_pct": 140,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "01-2025",
     "canal": "Cross Border Selling",
     "leads_real": 2,
@@ -111,17 +111,17 @@
     "cierres_avance_pct": 100,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "01-2025",
     "canal": "Otros",
-    "leads_real": 42,
+    "leads_real": 19,
     "leads_meta": 0,
     "leads_avance_pct": 0,
     "leads_estado": "no-aplica",
-    "prospectos_real": 14,
+    "prospectos_real": 10,
     "prospectos_meta": 0,
     "prospectos_avance_pct": 0,
     "prospectos_estado": "no-aplica",
@@ -130,15 +130,15 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "02-2025",
     "canal": "Inbound",
-    "leads_real": 241,
+    "leads_real": 258,
     "leads_meta": 192,
-    "leads_avance_pct": 125.52,
+    "leads_avance_pct": 134.38,
     "leads_estado": "cumplido",
     "prospectos_real": 73,
     "prospectos_meta": 51,
@@ -149,10 +149,10 @@
     "cierres_avance_pct": 71.43,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 1
+    "dias_restantes": 26
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "02-2025",
     "canal": "Outbound",
     "leads_real": 10,
@@ -168,10 +168,10 @@
     "cierres_avance_pct": 60,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 1
+    "dias_restantes": 26
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "02-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -187,10 +187,10 @@
     "cierres_avance_pct": 100,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 1
+    "dias_restantes": 26
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "02-2025",
     "canal": "Hunting",
     "leads_real": 6,
@@ -206,10 +206,10 @@
     "cierres_avance_pct": 114.29,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 1
+    "dias_restantes": 26
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "02-2025",
     "canal": "Cross Selling",
     "leads_real": 3,
@@ -225,10 +225,10 @@
     "cierres_avance_pct": 80,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 1
+    "dias_restantes": 26
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "02-2025",
     "canal": "Cross Border Selling",
     "leads_real": 1,
@@ -244,13 +244,13 @@
     "cierres_avance_pct": 100,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 1
+    "dias_restantes": 26
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "02-2025",
     "canal": "Otros",
-    "leads_real": 30,
+    "leads_real": 13,
     "leads_meta": 0,
     "leads_avance_pct": 0,
     "leads_estado": "no-aplica",
@@ -263,29 +263,29 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
     "es_mes_actual": false,
-    "dias_restantes": 1
+    "dias_restantes": 26
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "03-2025",
     "canal": "Inbound",
-    "leads_real": 263,
+    "leads_real": 283,
     "leads_meta": 187,
-    "leads_avance_pct": 140.64,
+    "leads_avance_pct": 151.34,
     "leads_estado": "cumplido",
-    "prospectos_real": 97,
+    "prospectos_real": 100,
     "prospectos_meta": 50,
-    "prospectos_avance_pct": 194,
+    "prospectos_avance_pct": 200,
     "prospectos_estado": "cumplido",
-    "cierres_real": 14,
+    "cierres_real": 15,
     "cierres_meta": 14,
-    "cierres_avance_pct": 100,
+    "cierres_avance_pct": 107.14,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "03-2025",
     "canal": "Outbound",
     "leads_real": 105,
@@ -296,15 +296,15 @@
     "prospectos_meta": 18,
     "prospectos_avance_pct": 183.33,
     "prospectos_estado": "cumplido",
-    "cierres_real": 5,
+    "cierres_real": 6,
     "cierres_meta": 5,
-    "cierres_avance_pct": 100,
+    "cierres_avance_pct": 120,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "03-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -320,10 +320,10 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "03-2025",
     "canal": "Hunting",
     "leads_real": 20,
@@ -339,10 +339,10 @@
     "cierres_avance_pct": 57.14,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "03-2025",
     "canal": "Cross Selling",
     "leads_real": 8,
@@ -358,10 +358,10 @@
     "cierres_avance_pct": 60,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "03-2025",
     "canal": "Cross Border Selling",
     "leads_real": 3,
@@ -377,17 +377,17 @@
     "cierres_avance_pct": 50,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "03-2025",
     "canal": "Otros",
-    "leads_real": 31,
+    "leads_real": 12,
     "leads_meta": 0,
     "leads_avance_pct": 0,
     "leads_estado": "no-aplica",
-    "prospectos_real": 6,
+    "prospectos_real": 4,
     "prospectos_meta": 0,
     "prospectos_avance_pct": 0,
     "prospectos_estado": "no-aplica",
@@ -396,29 +396,29 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "04-2025",
     "canal": "Inbound",
-    "leads_real": 320,
+    "leads_real": 354,
     "leads_meta": 242,
-    "leads_avance_pct": 132.23,
+    "leads_avance_pct": 146.28,
     "leads_estado": "cumplido",
-    "prospectos_real": 139,
+    "prospectos_real": 150,
     "prospectos_meta": 67,
-    "prospectos_avance_pct": 207.46,
+    "prospectos_avance_pct": 223.88,
     "prospectos_estado": "cumplido",
     "cierres_real": 31,
     "cierres_meta": 19,
     "cierres_avance_pct": 163.16,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "04-2025",
     "canal": "Outbound",
     "leads_real": 64,
@@ -434,10 +434,10 @@
     "cierres_avance_pct": 50,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "04-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -453,10 +453,10 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "04-2025",
     "canal": "Hunting",
     "leads_real": 10,
@@ -472,10 +472,10 @@
     "cierres_avance_pct": 114.29,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "04-2025",
     "canal": "Cross Selling",
     "leads_real": 6,
@@ -491,10 +491,10 @@
     "cierres_avance_pct": 200,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "04-2025",
     "canal": "Cross Border Selling",
     "leads_real": 0,
@@ -510,17 +510,17 @@
     "cierres_avance_pct": 50,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "04-2025",
     "canal": "Otros",
-    "leads_real": 131,
+    "leads_real": 97,
     "leads_meta": 0,
     "leads_avance_pct": 0,
     "leads_estado": "no-aplica",
-    "prospectos_real": 36,
+    "prospectos_real": 25,
     "prospectos_meta": 0,
     "prospectos_avance_pct": 0,
     "prospectos_estado": "no-aplica",
@@ -529,10 +529,10 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "05-2025",
     "canal": "Inbound",
     "leads_real": 314,
@@ -548,10 +548,10 @@
     "cierres_avance_pct": 213.33,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "05-2025",
     "canal": "Outbound",
     "leads_real": 34,
@@ -567,10 +567,10 @@
     "cierres_avance_pct": 80,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "05-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -586,10 +586,10 @@
     "cierres_avance_pct": 100,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "05-2025",
     "canal": "Hunting",
     "leads_real": 13,
@@ -605,10 +605,10 @@
     "cierres_avance_pct": 85.71,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "05-2025",
     "canal": "Cross Selling",
     "leads_real": 5,
@@ -624,10 +624,10 @@
     "cierres_avance_pct": 200,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "05-2025",
     "canal": "Cross Border Selling",
     "leads_real": 3,
@@ -643,10 +643,10 @@
     "cierres_avance_pct": 100,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "05-2025",
     "canal": "Otros",
     "leads_real": 5,
@@ -662,10 +662,10 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "06-2025",
     "canal": "Inbound",
     "leads_real": 327,
@@ -681,10 +681,10 @@
     "cierres_avance_pct": 135.71,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "06-2025",
     "canal": "Outbound",
     "leads_real": 55,
@@ -700,10 +700,10 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "06-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -719,10 +719,10 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "06-2025",
     "canal": "Hunting",
     "leads_real": 14,
@@ -738,10 +738,10 @@
     "cierres_avance_pct": 71.43,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "06-2025",
     "canal": "Cross Selling",
     "leads_real": 7,
@@ -757,10 +757,10 @@
     "cierres_avance_pct": 280,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "06-2025",
     "canal": "Cross Border Selling",
     "leads_real": 2,
@@ -776,10 +776,10 @@
     "cierres_avance_pct": 100,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "06-2025",
     "canal": "Otros",
     "leads_real": 305,
@@ -795,29 +795,29 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "07-2025",
     "canal": "Inbound",
-    "leads_real": 262,
+    "leads_real": 272,
     "leads_meta": 236,
-    "leads_avance_pct": 111.02,
+    "leads_avance_pct": 115.25,
     "leads_estado": "cumplido",
-    "prospectos_real": 165,
+    "prospectos_real": 169,
     "prospectos_meta": 64,
-    "prospectos_avance_pct": 257.81,
+    "prospectos_avance_pct": 264.06,
     "prospectos_estado": "cumplido",
-    "cierres_real": 18,
+    "cierres_real": 19,
     "cierres_meta": 18,
-    "cierres_avance_pct": 100,
+    "cierres_avance_pct": 105.56,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "07-2025",
     "canal": "Outbound",
     "leads_real": 54,
@@ -833,10 +833,10 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "07-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -852,10 +852,10 @@
     "cierres_avance_pct": 300,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "07-2025",
     "canal": "Hunting",
     "leads_real": 9,
@@ -871,10 +871,10 @@
     "cierres_avance_pct": 57.14,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "07-2025",
     "canal": "Cross Selling",
     "leads_real": 4,
@@ -890,10 +890,10 @@
     "cierres_avance_pct": 120,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "07-2025",
     "canal": "Cross Border Selling",
     "leads_real": 1,
@@ -909,17 +909,17 @@
     "cierres_avance_pct": 50,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "07-2025",
     "canal": "Otros",
-    "leads_real": 96,
+    "leads_real": 87,
     "leads_meta": 0,
     "leads_avance_pct": 0,
     "leads_estado": "no-aplica",
-    "prospectos_real": 21,
+    "prospectos_real": 17,
     "prospectos_meta": 0,
     "prospectos_avance_pct": 0,
     "prospectos_estado": "no-aplica",
@@ -928,29 +928,29 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "08-2025",
     "canal": "Inbound",
-    "leads_real": 255,
+    "leads_real": 288,
     "leads_meta": 279,
-    "leads_avance_pct": 91.4,
-    "leads_estado": "alerta",
-    "prospectos_real": 141,
+    "leads_avance_pct": 103.23,
+    "leads_estado": "cumplido",
+    "prospectos_real": 163,
     "prospectos_meta": 76,
-    "prospectos_avance_pct": 185.53,
+    "prospectos_avance_pct": 214.47,
     "prospectos_estado": "cumplido",
     "cierres_real": 33,
     "cierres_meta": 21,
     "cierres_avance_pct": 157.14,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "08-2025",
     "canal": "Outbound",
     "leads_real": 45,
@@ -966,10 +966,10 @@
     "cierres_avance_pct": 42.86,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "08-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -985,10 +985,10 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "08-2025",
     "canal": "Hunting",
     "leads_real": 24,
@@ -1004,10 +1004,10 @@
     "cierres_avance_pct": 100,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "08-2025",
     "canal": "Cross Selling",
     "leads_real": 13,
@@ -1023,10 +1023,10 @@
     "cierres_avance_pct": 140,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "08-2025",
     "canal": "Cross Border Selling",
     "leads_real": 1,
@@ -1042,17 +1042,17 @@
     "cierres_avance_pct": 150,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "08-2025",
     "canal": "Otros",
-    "leads_real": 48,
+    "leads_real": 15,
     "leads_meta": 0,
     "leads_avance_pct": 0,
     "leads_estado": "no-aplica",
-    "prospectos_real": 30,
+    "prospectos_real": 9,
     "prospectos_meta": 0,
     "prospectos_avance_pct": 0,
     "prospectos_estado": "no-aplica",
@@ -1061,29 +1061,29 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "09-2025",
     "canal": "Inbound",
-    "leads_real": 327,
+    "leads_real": 351,
     "leads_meta": 329,
-    "leads_avance_pct": 99.39,
-    "leads_estado": "alerta",
-    "prospectos_real": 204,
+    "leads_avance_pct": 106.69,
+    "leads_estado": "cumplido",
+    "prospectos_real": 211,
     "prospectos_meta": 90,
-    "prospectos_avance_pct": 226.67,
+    "prospectos_avance_pct": 234.44,
     "prospectos_estado": "cumplido",
     "cierres_real": 38,
     "cierres_meta": 25,
     "cierres_avance_pct": 152,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "09-2025",
     "canal": "Outbound",
     "leads_real": 28,
@@ -1099,10 +1099,10 @@
     "cierres_avance_pct": 25,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "09-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -1118,10 +1118,10 @@
     "cierres_avance_pct": 50,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "09-2025",
     "canal": "Hunting",
     "leads_real": 11,
@@ -1137,10 +1137,10 @@
     "cierres_avance_pct": 114.29,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "09-2025",
     "canal": "Cross Selling",
     "leads_real": 9,
@@ -1156,10 +1156,10 @@
     "cierres_avance_pct": 340,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "09-2025",
     "canal": "Cross Border Selling",
     "leads_real": 0,
@@ -1175,17 +1175,17 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "09-2025",
     "canal": "Otros",
-    "leads_real": 255,
+    "leads_real": 231,
     "leads_meta": 0,
     "leads_avance_pct": 0,
     "leads_estado": "no-aplica",
-    "prospectos_real": 69,
+    "prospectos_real": 61,
     "prospectos_meta": 0,
     "prospectos_avance_pct": 0,
     "prospectos_estado": "no-aplica",
@@ -1194,29 +1194,29 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
     "es_mes_actual": false,
-    "dias_restantes": 3
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "10-2025",
     "canal": "Inbound",
-    "leads_real": 274,
+    "leads_real": 301,
     "leads_meta": 363,
-    "leads_avance_pct": 75.48,
+    "leads_avance_pct": 82.92,
     "leads_estado": "alerta",
-    "prospectos_real": 167,
+    "prospectos_real": 183,
     "prospectos_meta": 100,
-    "prospectos_avance_pct": 167,
+    "prospectos_avance_pct": 183,
     "prospectos_estado": "cumplido",
     "cierres_real": 17,
     "cierres_meta": 28,
     "cierres_avance_pct": 60.71,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "10-2025",
     "canal": "Outbound",
     "leads_real": 52,
@@ -1232,10 +1232,10 @@
     "cierres_avance_pct": 12.5,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "10-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -1251,10 +1251,10 @@
     "cierres_avance_pct": 500,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "10-2025",
     "canal": "Hunting",
     "leads_real": 6,
@@ -1270,10 +1270,10 @@
     "cierres_avance_pct": 42.86,
     "cierres_estado": "alerta",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "10-2025",
     "canal": "Cross Selling",
     "leads_real": 11,
@@ -1289,10 +1289,10 @@
     "cierres_avance_pct": 120,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "10-2025",
     "canal": "Cross Border Selling",
     "leads_real": 2,
@@ -1308,17 +1308,17 @@
     "cierres_avance_pct": 150,
     "cierres_estado": "cumplido",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "10-2025",
     "canal": "Otros",
-    "leads_real": 1334,
+    "leads_real": 1308,
     "leads_meta": 0,
     "leads_avance_pct": 0,
     "leads_estado": "no-aplica",
-    "prospectos_real": 277,
+    "prospectos_real": 259,
     "prospectos_meta": 0,
     "prospectos_avance_pct": 0,
     "prospectos_estado": "no-aplica",
@@ -1327,48 +1327,48 @@
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
     "es_mes_actual": false,
-    "dias_restantes": 4
+    "dias_restantes": 29
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "11-2025",
     "canal": "Inbound",
-    "leads_real": 306,
+    "leads_real": 359,
     "leads_meta": 478,
-    "leads_avance_pct": 64.02,
+    "leads_avance_pct": 75.1,
     "leads_estado": "alerta",
-    "prospectos_real": 137,
+    "prospectos_real": 168,
     "prospectos_meta": 130,
-    "prospectos_avance_pct": 105.38,
+    "prospectos_avance_pct": 129.23,
     "prospectos_estado": "cumplido",
-    "cierres_real": 16,
+    "cierres_real": 28,
     "cierres_meta": 36,
-    "cierres_avance_pct": 44.44,
+    "cierres_avance_pct": 77.78,
     "cierres_estado": "alerta",
-    "es_mes_actual": true,
-    "dias_restantes": 3
+    "es_mes_actual": false,
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "11-2025",
     "canal": "Outbound",
-    "leads_real": 32,
+    "leads_real": 37,
     "leads_meta": 100,
-    "leads_avance_pct": 32,
+    "leads_avance_pct": 37,
     "leads_estado": "alerta",
-    "prospectos_real": 30,
+    "prospectos_real": 35,
     "prospectos_meta": 27,
-    "prospectos_avance_pct": 111.11,
+    "prospectos_avance_pct": 129.63,
     "prospectos_estado": "cumplido",
     "cierres_real": 2,
     "cierres_meta": 11,
     "cierres_avance_pct": 18.18,
     "cierres_estado": "alerta",
-    "es_mes_actual": true,
-    "dias_restantes": 3
+    "es_mes_actual": false,
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "11-2025",
     "canal": "Ferias/Eventos",
     "leads_real": 0,
@@ -1379,15 +1379,15 @@
     "prospectos_meta": 0,
     "prospectos_avance_pct": 0,
     "prospectos_estado": "cumplido",
-    "cierres_real": 3,
+    "cierres_real": 4,
     "cierres_meta": 0,
     "cierres_avance_pct": 0,
     "cierres_estado": "cumplido",
-    "es_mes_actual": true,
-    "dias_restantes": 3
+    "es_mes_actual": false,
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "11-2025",
     "canal": "Hunting",
     "leads_real": 0,
@@ -1402,11 +1402,11 @@
     "cierres_meta": 7,
     "cierres_avance_pct": 14.29,
     "cierres_estado": "alerta",
-    "es_mes_actual": true,
-    "dias_restantes": 3
+    "es_mes_actual": false,
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "11-2025",
     "canal": "Cross Selling",
     "leads_real": 9,
@@ -1417,15 +1417,15 @@
     "prospectos_meta": 5,
     "prospectos_avance_pct": 180,
     "prospectos_estado": "cumplido",
-    "cierres_real": 6,
+    "cierres_real": 8,
     "cierres_meta": 5,
-    "cierres_avance_pct": 120,
+    "cierres_avance_pct": 160,
     "cierres_estado": "cumplido",
-    "es_mes_actual": true,
-    "dias_restantes": 3
+    "es_mes_actual": false,
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "11-2025",
     "canal": "Cross Border Selling",
     "leads_real": 3,
@@ -1436,22 +1436,22 @@
     "prospectos_meta": 2,
     "prospectos_avance_pct": 150,
     "prospectos_estado": "cumplido",
-    "cierres_real": 4,
+    "cierres_real": 5,
     "cierres_meta": 2,
-    "cierres_avance_pct": 200,
+    "cierres_avance_pct": 250,
     "cierres_estado": "cumplido",
-    "es_mes_actual": true,
-    "dias_restantes": 3
+    "es_mes_actual": false,
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "11-2025",
     "canal": "Otros",
-    "leads_real": 34,
+    "leads_real": 17,
     "leads_meta": 0,
     "leads_avance_pct": 0,
     "leads_estado": "no-aplica",
-    "prospectos_real": 11,
+    "prospectos_real": 3,
     "prospectos_meta": 0,
     "prospectos_avance_pct": 0,
     "prospectos_estado": "no-aplica",
@@ -1459,11 +1459,144 @@
     "cierres_meta": 0,
     "cierres_avance_pct": 0,
     "cierres_estado": "no-aplica",
-    "es_mes_actual": true,
-    "dias_restantes": 3
+    "es_mes_actual": false,
+    "dias_restantes": 28
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
+    "periodo": "12-2025",
+    "canal": "Inbound",
+    "leads_real": 24,
+    "leads_meta": 674,
+    "leads_avance_pct": 3.56,
+    "leads_estado": "on-track",
+    "prospectos_real": 15,
+    "prospectos_meta": 187,
+    "prospectos_avance_pct": 8.02,
+    "prospectos_estado": "on-track",
+    "cierres_real": 1,
+    "cierres_meta": 53,
+    "cierres_avance_pct": 1.89,
+    "cierres_estado": "on-track",
+    "es_mes_actual": true,
+    "dias_restantes": 29
+  },
+  {
+    "fecha_del_reporte": "02-12-2025",
+    "periodo": "12-2025",
+    "canal": "Outbound",
+    "leads_real": 2,
+    "leads_meta": 100,
+    "leads_avance_pct": 2,
+    "leads_estado": "on-track",
+    "prospectos_real": 2,
+    "prospectos_meta": 60,
+    "prospectos_avance_pct": 3.33,
+    "prospectos_estado": "on-track",
+    "cierres_real": 0,
+    "cierres_meta": 16,
+    "cierres_avance_pct": 0,
+    "cierres_estado": "on-track",
+    "es_mes_actual": true,
+    "dias_restantes": 29
+  },
+  {
+    "fecha_del_reporte": "02-12-2025",
+    "periodo": "12-2025",
+    "canal": "Ferias/Eventos",
+    "leads_real": 0,
+    "leads_meta": 0,
+    "leads_avance_pct": 0,
+    "leads_estado": "cumplido",
+    "prospectos_real": 0,
+    "prospectos_meta": 0,
+    "prospectos_avance_pct": 0,
+    "prospectos_estado": "cumplido",
+    "cierres_real": 1,
+    "cierres_meta": 0,
+    "cierres_avance_pct": 0,
+    "cierres_estado": "cumplido",
+    "es_mes_actual": true,
+    "dias_restantes": 29
+  },
+  {
+    "fecha_del_reporte": "02-12-2025",
+    "periodo": "12-2025",
+    "canal": "Hunting",
+    "leads_real": 0,
+    "leads_meta": 7,
+    "leads_avance_pct": 0,
+    "leads_estado": "on-track",
+    "prospectos_real": 0,
+    "prospectos_meta": 7,
+    "prospectos_avance_pct": 0,
+    "prospectos_estado": "on-track",
+    "cierres_real": 0,
+    "cierres_meta": 7,
+    "cierres_avance_pct": 0,
+    "cierres_estado": "on-track",
+    "es_mes_actual": true,
+    "dias_restantes": 29
+  },
+  {
+    "fecha_del_reporte": "02-12-2025",
+    "periodo": "12-2025",
+    "canal": "Cross Selling",
+    "leads_real": 1,
+    "leads_meta": 5,
+    "leads_avance_pct": 20,
+    "leads_estado": "on-track",
+    "prospectos_real": 1,
+    "prospectos_meta": 5,
+    "prospectos_avance_pct": 20,
+    "prospectos_estado": "on-track",
+    "cierres_real": 0,
+    "cierres_meta": 5,
+    "cierres_avance_pct": 0,
+    "cierres_estado": "on-track",
+    "es_mes_actual": true,
+    "dias_restantes": 29
+  },
+  {
+    "fecha_del_reporte": "02-12-2025",
+    "periodo": "12-2025",
+    "canal": "Cross Border Selling",
+    "leads_real": 0,
+    "leads_meta": 2,
+    "leads_avance_pct": 0,
+    "leads_estado": "on-track",
+    "prospectos_real": 0,
+    "prospectos_meta": 2,
+    "prospectos_avance_pct": 0,
+    "prospectos_estado": "on-track",
+    "cierres_real": 0,
+    "cierres_meta": 2,
+    "cierres_avance_pct": 0,
+    "cierres_estado": "on-track",
+    "es_mes_actual": true,
+    "dias_restantes": 29
+  },
+  {
+    "fecha_del_reporte": "02-12-2025",
+    "periodo": "12-2025",
+    "canal": "Otros",
+    "leads_real": 1,
+    "leads_meta": 0,
+    "leads_avance_pct": 0,
+    "leads_estado": "no-aplica",
+    "prospectos_real": 1,
+    "prospectos_meta": 0,
+    "prospectos_avance_pct": 0,
+    "prospectos_estado": "no-aplica",
+    "cierres_real": 0,
+    "cierres_meta": 0,
+    "cierres_avance_pct": 0,
+    "cierres_estado": "no-aplica",
+    "es_mes_actual": true,
+    "dias_restantes": 29
+  },
+  {
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "2025",
     "canal": "Inbound",
     "leads_real_ytd": 0,
@@ -1477,7 +1610,7 @@
     "cierres_cumplimiento_ytd_pct": 0
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "2025",
     "canal": "Outbound",
     "leads_real_ytd": 0,
@@ -1491,7 +1624,7 @@
     "cierres_cumplimiento_ytd_pct": 0
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "2025",
     "canal": "Ferias/Eventos",
     "leads_real_ytd": 0,
@@ -1505,7 +1638,7 @@
     "cierres_cumplimiento_ytd_pct": 0
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "2025",
     "canal": "Hunting",
     "leads_real_ytd": 0,
@@ -1519,7 +1652,7 @@
     "cierres_cumplimiento_ytd_pct": 0
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "2025",
     "canal": "Cross Selling",
     "leads_real_ytd": 0,
@@ -1533,7 +1666,7 @@
     "cierres_cumplimiento_ytd_pct": 0
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "2025",
     "canal": "Cross Border Selling",
     "leads_real_ytd": 0,
@@ -1547,7 +1680,7 @@
     "cierres_cumplimiento_ytd_pct": 0
   },
   {
-    "fecha_del_reporte": "27-11-2025",
+    "fecha_del_reporte": "02-12-2025",
     "periodo": "2025",
     "canal": "Otros",
     "leads_real_ytd": 0,

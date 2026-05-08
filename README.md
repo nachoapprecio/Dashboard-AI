@@ -7,13 +7,36 @@ Dashboard Analítico con Chatbot integrado, Autenticación y generación de repo
 ## 🌟 Características
 
 - **Autenticación Segura**: Sistema de login con JWT y bcrypt
-- **Chatbot con IA**: Integración con Google Gemini para análisis inteligente de datos
+- **Chatbot con IA**: Integración con **Google Gemini 2.5 Flash** para análisis inteligente de datos
+- **Reporte Dinámico**: Carga datos desde JSON remoto (reporte-ejecutivo-2026.json)
 - **Dashboard Visual**: Visualización de métricas con gráficos interactivos
 - **Generación de PDF**: Reportes ejecutivos en PDF con Puppeteer
 - **Integración n8n**: Envío automático a webhook para procesamiento (email + Drive)
 - **Arquitectura Desacoplada**: Backend genera PDF, n8n maneja distribución
 - **Responsive Design**: Optimizado para desktop y móvil
-- **PostgreSQL**: Base de datos robusta con datos históricos
+- **PostgreSQL**: Base de datos robusta con almacenamiento de reportes en JSONB
+
+## 📊 Datos del Reporte (Nuevo Formato 2026)
+
+El sistema ahora carga datos desde:
+```
+https://estudios.apprecio.com/hubfs/reporte-performance/reporte-ejecutivo-2026.json
+```
+
+**Estructura de Datos:**
+- **Resumen Macro**: KPIs generales (leads, oportunidades, clientes, costos)
+- **Detalle por Canales**: Performance por canal de marketing (Inbound, Outbound, Hunting, etc.)
+- **Desglose de Fuentes**: Contribución de cada fuente de tráfico
+- **Análisis Geográfico**: Performance por país (Colombia, Chile, México, Perú, Ecuador)
+- **Ads y Social Media**: Métricas de Google Ads, Meta Ads y redes sociales
+- **Métricas de Eficiencia**: CPL, CAC, costo por reunión por período
+
+## ⚙️ Modelo de IA
+
+**Gemini 2.5 Flash** (última generación)
+- Análisis rápido y preciso
+- Mejor comprensión de estructuras complejas
+- Optimizado para procesamiento de datos masivos
 
 ## ⚠️ Requisitos Importantes
 
