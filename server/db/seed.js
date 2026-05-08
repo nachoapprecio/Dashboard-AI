@@ -170,4 +170,83 @@ async function seed() {
   }
 }
 
-seed();
+// Función para cargar datos de reporte si la tabla está vacía (para auto-seed en producción)
+export async function loadReportDataIfEmpty() {
+  const client = await pool.connect();
+  
+  try {
+    // Verificar si ya hay datos
+    const countResult = await client.query('SELECT COUNT(*) FROM reportes_json');
+    const rowCount = parseInt(countResult.rows[0].count);
+    
+    if (rowCount > 0) {
+      console.log(`✅ Base de datos ya contiene ${rowCount} reporte(s), omitiendo carga automática`);
+      return;
+    }
+    
+    console.log('📥 Base de datos vacía, cargando datos automáticamente...');
+    
+    let reportData;
+    try {
+      const response = await axios.get('https://estudios.apprecio.com/hubfs/reporte-performance/reporte-ejecutivo-2026.json');
+      reportData = response.data;
+      console.log('✅ Reporte descargado correctamente');
+    } catch (downloadError) {
+      console.warn('⚠️  No se pudo descargar desde URL remota, intentando usar archivo local...');
+      try {
+        const localPath = path.join(__dirname, '../../reporte-ejecutivo-dash.json');
+        if (fs.existsSync(localPath)) {
+          reportData = JSON.parse(fs.readFileSync(localPath, 'utf8'));
+          console.log('✅ Usando archivo local: reporte-ejecutivo-dash.json');
+        } else {
+          throw new Error('No se encontró archivo local ni URL remota');
+        }
+      } catch (localError) {
+        console.error('❌ Error cargando datos:', localError.message);
+        return;
+      }
+    }
+    
+    // Normalizar estructura del JSON remoto
+    let reportPayload = null;
+    if (Array.isArray(reportData) && reportData.length > 0) {
+      if (reportData[0]?.report) {
+        reportPayload = reportData[0].report;
+      } else if (reportData[0]?.resumen_macro) {
+        reportPayload = reportData[0];
+      }
+    } else if (reportData?.report) {
+      reportPayload = reportData.report;
+    } else if (reportData?.resumen_macro) {
+      reportPayload = reportData;
+    }
+    
+    if (reportPayload && reportPayload.resumen_macro) {
+      const fecha = reportPayload.fecha_reporte || new Date().toISOString().split('T')[0];
+      const report = {
+        fecha_reporte: fecha,
+        ...reportPayload
+      };
+      
+      await client.query(`
+        INSERT INTO reportes_json (fecha_reporte, datos_completos)
+        VALUES ($1, $2)
+        ON CONFLICT (fecha_reporte) DO NOTHING
+      `, [fecha, JSON.stringify(report)]);
+      
+      console.log('✅ Reporte JSON cargado automáticamente en base de datos');
+    } else {
+      console.warn('⚠️  No se pudo detectar el formato del reporte para carga automática');
+    }
+    
+  } catch (error) {
+    console.error('❌ Error en carga automática de datos:', error.message);
+  } finally {
+    client.release();
+  }
+}
+
+// Mantener seed directo si se ejecuta como script
+if (import.meta.url === `file://${process.argv[1]}`) {
+  seed();
+}

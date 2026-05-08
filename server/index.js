@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import pool from './config/db.js';
+import { loadReportDataIfEmpty } from './db/seed.js';
 
 // Cargar variables de entorno ANTES de importar las rutas
 dotenv.config();
@@ -37,6 +38,9 @@ async function ensureTables() {
     `);
     
     console.log('✅ Tabla reportes_json verificada/creada');
+    
+    // Cargar datos si la tabla está vacía
+    await loadReportDataIfEmpty();
   } catch (error) {
     console.error('❌ Error en migración de base de datos:', error.message);
   }
