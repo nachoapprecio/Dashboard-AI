@@ -7,7 +7,7 @@ const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
 /**
  * Genera una respuesta de IA basada en los datos del reporte nuevo (formato 2026)
- * Modelo: gemini-2.5-flash (última generación de Gemini)
+ * Modelo: gemini-3.1-pro-preview (última generación, más potente y preciso)
  * 
  * @param {string} userQuestion - Pregunta del usuario
  * @param {object} reportData - Datos del reporte (estructura completa con métricas, canales, etc.)
@@ -30,91 +30,65 @@ export async function generateAIResponse(userQuestion, reportData) {
       : normalizedData;
 
     const model = genAI.getGenerativeModel({ 
-      model: 'gemini-2.5-flash',
+      model: 'gemini-3.1-pro-preview',
       generationConfig: {
         temperature: 0.7,
-        maxOutputTokens: 2048
+        maxOutputTokens: 8192
       }
     });
 
-    // Prompt alineado con la estructura real del JSON 2026 de HubSpot
-    const systemPrompt = `Eres un Analista Senior de Growth B2B SaaS para Apprecio.
-
-Tu tarea es analizar desempeno comercial de NUEVOS CLIENTES del anio 2026 usando el JSON entregado.
-
-IMPORTANTE:
-- Responde SOLO con JSON valido (sin markdown, sin texto extra).
-- No inventes datos.
-- Si un dato no existe, usa null y explica brevemente en comentario.
-- Tono: ejecutivo, claro, accionable, no alarmista.
-
-PREGUNTA DEL USUARIO:
-"${userQuestion}"
-
-ESTRUCTURA REAL DE DATOS (usa estos campos exactos):
-- fecha de corte: fecha_reporte
-- periodos y etiquetas: periodos.monthLabel, periodos.yearLabel
-- resumen mensual: resumen_macro.mes
-  - leads, oportunidades, clientes, costo_total, cpl, costo_reunion, cac, conv_lead_opp, conv_opp_cliente
-- resumen acumulado anio: resumen_macro.ytd_cerrado
-  - mismas metricas que resumen_macro.mes
-- desempeno por canal: cumplimiento_por_canal[]
-  - canal
-  - mes: leads_real, leads_meta, leads_cumplimiento_pct, oportunidades_real, oportunidades_meta, oportunidades_cumplimiento_pct, cierres_real, cierres_meta, cierres_cumplimiento_pct
-  - ytd: mismas metricas
-  - eficiencia: cpl_mes, cpl_ytd, costo_reunion_mes, costo_reunion_ytd, cac_mes, cac_ytd
-- detalle por canal agregado: detalle_canales[canal]
-- historico mensual para consultas por mes especifico: historico_mensual[]
-  - periodo (formato MM-YYYY), canal, leads_real, oportunidades_real, cierres_real, monto_usd
-- geografia: desglose_paises[]
-  - pais, leads_mes, leads_ytd, opp_mes, opp_ytd, cierres_mes, cierres_ytd, monto_mes, monto_ytd
-- marketing y trafico: ads_y_social (ads, rrss, sesiones)
-
-REGLAS DE ANALISIS:
-1) Si la pregunta menciona un mes (ej. "enero"), filtra historico_mensual por ese mes en formato MM-2026 (enero=01-2026, febrero=02-2026, etc.) y agrega resultados por canal y total.
-2) Para anio o acumulado, usa resumen_macro.ytd_cerrado y cumplimiento_por_canal[].ytd.
-3) Para mes actual, usa resumen_macro.mes y cumplimiento_por_canal[].mes.
-4) Interpreta "nuevos clientes" como cierres/clientes (cierres_real o clientes segun seccion).
-5) Destaca canal mas efectivo y canal con oportunidad usando cumplimiento y eficiencia (cierres, conversion y CAC/CPL).
-6) Si no hay datos del mes solicitado, dilo explicitamente y entrega contexto util con YTD y ultimo mes disponible.
-
-DATOS DISPONIBLES:
-${JSON.stringify(compactReportContext, null, 2)}
-
-FORMATO DE SALIDA (obligatorio):
-{
-  "fecha_reporte": "YYYY-MM-DD",
-  "titulo": "Informe Ejecutivo - enfoque en nuevos clientes 2026",
-  "resumen_ejecutivo": "4-5 frases maximo con hallazgos clave segun la pregunta",
-  "indicadores_clave_ytd": [
-    {
-      "indicador": "Leads|Oportunidades|Clientes",
-      "real_ytd": 0,
-      "meta_ytd": 0,
-      "cumplimiento_ytd_pct": 0,
-      "estado_ytd": "cumplido|alerta|critico",
-      "comentario": "1-2 frases con interpretacion de negocio"
+    // Prompt SIMPLIFICADO para evitar truncamiento de Gemini
+    // Enviamos SOLO los datos necesarios, prompt muy conciso
+    const months = {
+      'enero': '01-2026', 'febrero': '02-2026', 'marzo': '03-2026', 'abril': '04-2026',
+      'mayo': '05-2026', 'junio': '06-2026', 'julio': '07-2026', 'agosto': '08-2026',
+      'septiembre': '09-2026', 'octubre': '10-2026', 'noviembre': '11-2026', 'diciembre': '12-2026'
+    };
+    
+    let monthFilter = null;
+    for (const [month, code] of Object.entries(months)) {
+      if (userQuestion.toLowerCase().includes(month)) {
+        monthFilter = code;
+        break;
+      }
     }
+    
+    // Filtrar datos solo del mes si aplica
+    let contextToSend = normalizedData;
+    if (monthFilter && normalizedData.historico_mensual) {
+      const monthData = normalizedData.historico_mensual.filter(h => h.periodo === monthFilter);
+      contextToSend = {
+        fecha_reporte: normalizedData.fecha_reporte,
+        periodo_solicitado: monthFilter,
+        datos_mes: monthData,
+        resumen_macro: normalizedData.resumen_macro,
+        cumplimiento_por_canal: normalizedData.cumplimiento_por_canal
+      };
+    }
+
+    const systemPrompt = `Eres analista de datos comerciales. Tu tarea: analizar desempeño 2026 de Apprecio.
+Devuelve SOLO JSON valido, sin markdown ni texto extra.
+
+DATOS:
+${JSON.stringify(contextToSend, null, 2).substring(0, 3000)}
+
+PREGUNTA: ${userQuestion}
+
+RESPONDE ESTE JSON (todos los campos obligatorios):
+{
+  "fecha_reporte": "2026-05-08",
+  "titulo": "Informe Ejecutivo - Desempeño Nuevos Clientes",
+  "resumen_ejecutivo": "Resumen de 3-4 frases con hallazgos clave",
+  "indicadores_clave_ytd": [
+    {"indicador": "Leads", "real": 0, "meta": 0, "cumplimiento_pct": 0, "estado": "cumplido"}
   ],
   "analisis_por_canal": {
-    "canal_mas_efectivo": [
-      {"canal": "nombre", "comentario": "motivo con datos"}
-    ],
-    "canal_con_oportunidad": [
-      {"canal": "nombre", "comentario": "brecha y accion sugerida"}
-    ]
+    "canal_mas_efectivo": [{"canal": "nombre", "comentario": "por qué"}],
+    "canal_con_oportunidad": [{"canal": "nombre", "comentario": "brecha"}]
   },
-  "analisis_por_pais": {
-    "pais_lider": "pais o null",
-    "comentario": "analisis breve de geografia comercial"
-  },
-  "estado_funnel_mes_actual": [
-    {"canal": "nombre", "comentario": "estado de leads->oportunidades->cierres"}
-  ],
-  "recomendaciones_estrategicas": [
-    "accion prioritaria 1",
-    "accion prioritaria 2"
-  ]
+  "analisis_por_pais": {"pais_lider": "pais", "comentario": "análisis"},
+  "estado_funnel_mes_actual": [{"canal": "nombre", "estado": "descripción"}],
+  "recomendaciones_estrategicas": ["acción 1", "acción 2"]
 }`;
 
     const result = await model.generateContent(systemPrompt);
@@ -137,7 +111,7 @@ FORMATO DE SALIDA (obligatorio):
         jsonResponse = JSON.parse(cleanText);
       }
       
-      console.log('✅ JSON parseado correctamente con Gemini 2.5 Flash');
+      console.log('✅ JSON parseado correctamente con Gemini 3.1 Pro');
     } catch (parseError) {
       console.error('❌ Error parseando JSON:', parseError.message);
       console.log('Texto recibido (primeros 200 caracteres):', text.substring(0, 200));
