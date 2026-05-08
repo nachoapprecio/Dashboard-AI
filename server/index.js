@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import pool from './config/db.js';
 
 // Cargar variables de entorno ANTES de importar las rutas
 dotenv.config();
@@ -17,6 +18,32 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Auto-migración: crear tabla reportes_json si no existe
+async function ensureTables() {
+  try {
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS reportes_json (
+        id SERIAL PRIMARY KEY,
+        fecha_reporte DATE NOT NULL UNIQUE,
+        datos_completos JSONB NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
+    
+    // Crear índice si no existe
+    await pool.query(`
+      CREATE INDEX IF NOT EXISTS idx_reportes_json_fecha ON reportes_json(fecha_reporte DESC);
+    `);
+    
+    console.log('✅ Tabla reportes_json verificada/creada');
+  } catch (error) {
+    console.error('❌ Error en migración de base de datos:', error.message);
+  }
+}
+
+// Ejecutar migraciones al iniciar
+await ensureTables();
 
 // Middleware
 app.use(cors({
