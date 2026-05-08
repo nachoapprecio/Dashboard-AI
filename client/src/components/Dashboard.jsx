@@ -230,12 +230,16 @@ function Dashboard({ aiResponse }) {
     // 1. Array indicadores_clave_ytd (nueva estructura)
     if (data.indicadores_clave_ytd && Array.isArray(data.indicadores_clave_ytd)) {
       data.indicadores_clave_ytd.forEach(indicador => {
+        const realValue = indicador.real_ytd ?? indicador.real ?? indicador.valor_real ?? null;
+        const metaValue = indicador.meta_ytd ?? indicador.meta ?? indicador.valor_meta ?? null;
+        const pctValue = indicador.cumplimiento_ytd_pct ?? indicador.cumplimiento_pct ?? indicador.porcentaje ?? '0';
+        const statusValue = indicador.estado_ytd ?? indicador.estado ?? 'sin datos';
         metrics.push({
           title: indicador.indicador,
-          value: indicador.real_ytd,
-          meta: indicador.meta_ytd,
-          percentage: indicador.cumplimiento_ytd_pct,
-          status: indicador.estado_ytd || 'sin datos',
+          value: realValue,
+          meta: metaValue,
+          percentage: pctValue,
+          status: statusValue,
           period: 'YTD',
           comentario: indicador.comentario
         });
@@ -508,9 +512,20 @@ function Dashboard({ aiResponse }) {
             {aiResponse.estado_funnel_mes_actual.map((canal, index) => (
               <div key={index} className="channel-card">
                 <h4>{canal.canal}</h4>
-                <p>{canal.comentario}</p>
+                <p>{canal.comentario || canal.estado}</p>
               </div>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* Análisis por País */}
+      {aiResponse.analisis_por_pais && (
+        <div className="section">
+          <h2>Análisis por País</h2>
+          <div className="insight-card primary">
+            <h4>{aiResponse.analisis_por_pais.pais_lider || 'No definido'}</h4>
+            <p>{aiResponse.analisis_por_pais.comentario}</p>
           </div>
         </div>
       )}
