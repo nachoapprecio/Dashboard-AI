@@ -37,8 +37,7 @@ export async function generateAIResponse(userQuestion, reportData) {
       }
     });
 
-    // Prompt SIMPLIFICADO para evitar truncamiento de Gemini
-    // Enviamos SOLO los datos necesarios, prompt muy conciso
+    // Detectar mes mencionado en la pregunta
     const months = {
       'enero': '01-2026', 'febrero': '02-2026', 'marzo': '03-2026', 'abril': '04-2026',
       'mayo': '05-2026', 'junio': '06-2026', 'julio': '07-2026', 'agosto': '08-2026',
@@ -53,24 +52,58 @@ export async function generateAIResponse(userQuestion, reportData) {
       }
     }
     
-    // Filtrar datos solo del mes si aplica
-    let contextToSend = normalizedData;
-    if (monthFilter && normalizedData.historico_mensual) {
-      const monthData = normalizedData.historico_mensual.filter(h => h.periodo === monthFilter);
-      contextToSend = {
-        fecha_reporte: normalizedData.fecha_reporte,
-        periodo_solicitado: monthFilter,
-        datos_mes: monthData,
-        resumen_macro: normalizedData.resumen_macro,
-        cumplimiento_por_canal: normalizedData.cumplimiento_por_canal
-      };
-    }
+    // Construir contexto compacto y estable (sin recortar JSON a mitad)
+    const monthData = monthFilter && Array.isArray(normalizedData.historico_mensual)
+      ? normalizedData.historico_mensual.filter((h) => h.periodo === monthFilter)
+      : [];
 
-    const systemPrompt = `Eres analista de datos comerciales. Tu tarea: analizar desempeño 2026 de Apprecio.
+    const channelsFromMonthly = Array.from(
+      new Set(monthData.map((r) => r.canal).filter(Boolean))
+    );
+
+    const monthlyTotals = monthData.reduce((acc, row) => {
+      acc.leads += Number(row.leads_real || 0);
+      acc.oportunidades += Number(row.oportunidades_real || 0);
+      acc.cierres += Number(row.cierres_real || 0);
+      acc.monto_usd += Number(row.monto_usd || 0);
+      return acc;
+    }, { leads: 0, oportunidades: 0, cierres: 0, monto_usd: 0 });
+
+    const countrySummary = Array.isArray(normalizedData.desglose_paises)
+      ? normalizedData.desglose_paises.map((p) => ({
+          pais: p.pais,
+          cierres_mes: p.cierres_mes,
+          cierres_ytd: p.cierres_ytd,
+          monto_mes: p.monto_mes,
+          monto_ytd: p.monto_ytd
+        }))
+      : [];
+
+    const contextToSend = {
+      fecha_reporte: normalizedData.fecha_reporte,
+      pregunta: userQuestion,
+      periodo_solicitado: monthFilter,
+      resumen_macro: normalizedData.resumen_macro,
+      cumplimiento_por_canal: normalizedData.cumplimiento_por_canal,
+      historico_mes_solicitado: monthData,
+      totales_mes_solicitado: monthFilter ? monthlyTotals : null,
+      canales_mes_solicitado: monthFilter ? channelsFromMonthly : [],
+      desglose_paises: countrySummary,
+      nota_categoria_otros: 'El canal "Otros" es una categoria agrupada de multiples fuentes y no debe confundirse con un canal operativo unico.'
+    };
+
+    const systemPrompt = `Eres analista de datos comerciales B2B.
 Devuelve SOLO JSON valido, sin markdown ni texto extra.
 
+REGLAS CLAVE:
+- Usa EXCLUSIVAMENTE los datos entregados.
+- Si la pregunta menciona un mes, prioriza historico_mes_solicitado.
+- Trata "Otros" como categoria agrupada. No asumas que es un canal operativo unico.
+- Si "Otros" concentra resultados, indicalo y adicionalmente destaca 1 canal operativo (por ejemplo Inbound/Outbound/Hunting/Cross Selling/Cross Border Selling/Ferias/Eventos) como referencia comparativa.
+- Si hay desglose_paises, NO digas que no existe informacion por pais.
+
 DATOS:
-${JSON.stringify(contextToSend, null, 2).substring(0, 3000)}
+${JSON.stringify(contextToSend, null, 2)}
 
 PREGUNTA: ${userQuestion}
 
