@@ -14,13 +14,29 @@ router.post('/chat', authenticateToken, async (req, res) => {
   }
 
   try {
-    // Obtener todos los datos de reportes desde la BD
-    const result = await pool.query(`
-      SELECT * FROM reportes 
-      ORDER BY fecha_del_reporte DESC, canal
+    // Priorizar el formato nuevo (reportes_json) y mantener fallback al formato antiguo
+    const latestJsonReport = await pool.query(`
+      SELECT fecha_reporte, datos_completos
+      FROM reportes_json
+      ORDER BY fecha_reporte DESC
+      LIMIT 1
     `);
 
-    const reportData = result.rows;
+    let reportData;
+
+    if (latestJsonReport.rows.length > 0) {
+      reportData = latestJsonReport.rows[0].datos_completos;
+    } else {
+      const result = await pool.query(`
+        SELECT * FROM reportes 
+        ORDER BY fecha_del_reporte DESC, canal
+      `);
+      reportData = result.rows;
+    }
+
+    if (!reportData || (Array.isArray(reportData) && reportData.length === 0)) {
+      return res.status(404).json({ error: 'No hay datos de reporte cargados en la base de datos' });
+    }
 
     // Generar respuesta con IA
     const aiResponse = await generateAIResponse(question, reportData);

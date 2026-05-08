@@ -62,17 +62,26 @@ async function seed() {
       }
     }
     
-    // Limpiar tabla de reportes
+    // Limpiar tabla de reportes tabulares (formato antiguo)
     await client.query('DELETE FROM reportes');
-    
-    // Procesar datos según estructura (puede ser array o objeto con 'report')
-    let dataArray = Array.isArray(reportData) ? reportData : 
-                   reportData.report ? [reportData.report] : [reportData];
-    
+
+    // Normalizar estructura del JSON remoto (objeto, array, o array con { report })
+    let reportPayload = null;
+    if (Array.isArray(reportData) && reportData.length > 0) {
+      if (reportData[0]?.report) {
+        reportPayload = reportData[0].report;
+      } else if (reportData[0]?.resumen_macro) {
+        reportPayload = reportData[0];
+      }
+    } else if (reportData?.report) {
+      reportPayload = reportData.report;
+    } else if (reportData?.resumen_macro) {
+      reportPayload = reportData;
+    }
+
     // Extraer información del nuevo formato JSON
-    if (dataArray[0]?.resumen_macro) {
-      // Nuevo formato: JSON con estructura compleja
-      const report = dataArray[0];
+    if (reportPayload?.resumen_macro) {
+      const report = reportPayload;
       const fecha = report.fecha_reporte || new Date().toISOString().split('T')[0];
       
       console.log(`📊 Procesando estructura nueva del reporte (fecha: ${fecha})`);
@@ -87,9 +96,20 @@ async function seed() {
       console.log('✅ Reporte JSON guardado en base de datos');
     } else {
       // Formato antiguo: datos tabulares
+      const dataArray = Array.isArray(reportData)
+        ? reportData
+        : reportData?.report
+          ? [reportData.report]
+          : [reportData];
+
       console.log(`📊 Procesando estructura antigua del reporte (${dataArray.length} registros)`);
       
       for (const row of dataArray) {
+        if (!row?.fecha_del_reporte || typeof row.fecha_del_reporte !== 'string') {
+          console.warn('⚠️ Registro omitido por estructura inválida:', row);
+          continue;
+        }
+
         const [day, month, year] = row.fecha_del_reporte.split('-');
         const fechaFormateada = `${year}-${month}-${day}`;
         
